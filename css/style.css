@@ -1,0 +1,825 @@
+/* Start General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 5000;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+}
+
+p {
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.web-header {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.wh {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.under-line {
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    background-color: #ff4757;
+    margin-top: 15px;
+    margin-left: -45px;
+    display: inline-block;
+}
+
+#ul {
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    background-color: #ff4757;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.boxes {
+    overflow: auto;
+}
+
+.box{
+  float: left;
+  width: 30%;
+  border: 2px solid #ff4757;
+}
+
+.box-after-top-down::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0,0,0,.5);
+  transition: all .5s ease-in-out;
+}
+.box-after-top-down:hover::after{
+  height: 100%;
+  cursor: pointer;
+}
+/* Center box from left and right*/
+.box-c{
+  margin: 0 5%;
+}
+
+.box-c-left{
+  margin-left: 10%;
+}
+
+/* End General Styles */
+
+/* Start Header*/
+.header {
+    background-color: rgba(255,71,87,.8);
+    width: 100%;
+    line-height: 50px;
+    position: fixed;
+    padding: 20px 5%;
+    z-index: 1000;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 140px;
+    height: 60px;
+}
+
+.items {
+    float: right;
+}
+
+.header-items .list {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-items .list::after{
+    position: absolute;
+    content: "";
+    bottom:0;
+    left: 0;
+    width:0;
+    height:3px;
+    background-color:#fff;
+    display: none;
+    
+}
+
+.header-items .list:hover::after{
+    width:100%;
+   display: block;
+   transition: all .5s ease-in-out;
+}
+
+.header-items .list .link {
+    margin-left: 15px;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.bars {
+    color: #fff;
+    float: right;
+    display: none;
+}
+
+/* End Header */
+
+/* Start Hero Image */
+.hero-image {
+    background-image: url("/images/hero/5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    z-index: 100;
+    text-align: center;
+}
+
+.hero-title h2 {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-title p {
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    margin-top:10px ;
+    text-transform: capitalize;
+}
+.hero-title h2 span{
+    color:#ff4757;
+}
+
+.hero-title h2,
+.hero-title p {
+    color: #fff;
+}
+
+.hero-btn button {
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: 30px;
+    cursor: pointer;
+}
+.hero-btn .hero-color{
+  color: coral;
+}
+
+.hero-btn .hero-btn-style {
+    background-color: #ff4757;
+    margin-left: 15px;
+    width: 200px;
+    cursor: pointer;
+    color: #fff;
+}
+.hero-btn .hero-btn-style:hover{
+  background-color: #fff;
+  color:coral;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Start Hero Image */
+
+/* Start Welcome */
+#welcome {
+    text-align: center;
+}
+
+#welcome .welcome-header {
+    position: relative;
+}
+
+#welcome .boxes {
+    overflow: auto;
+}
+
+#welcome .boxes .box {
+    float: left;
+    width: 30%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    position: relative;
+}
+
+#welcome .boxes .box::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,71,87,.8);
+    transition: all 0.5s ease-in-out;
+}
+
+#welcome .boxes .box:hover::after {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#welcome .welcome-header h2 {
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+#welcome .welcome-icon i,
+#welcome .info h2,
+#welcome .info p {
+    margin-bottom: 15px;
+}
+#welcome .welcome-icon i{
+  color:#ff4757;
+}
+#welcome .info {
+    position: relative;
+}
+
+#welcome .boxes .box:hover .info {
+    color: #fff;
+    z-index: 1000;
+}
+
+#welcome .info .welcome-link {
+    text-transform: capitalize;
+    color:#ff4757;
+}
+
+/* End Welcome */
+
+/* Start Feature */
+#feature {
+    text-align: center;
+}
+
+#feature .container .boxes .box {
+    float: left;
+    width: 30%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+#feature .container .boxes .box .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 25%;
+    color: #fff;
+    visibility: hidden;
+}
+
+#feature .container .boxes .box:hover .overlay {
+    visibility: visible;
+    cursor: pointer;
+}
+
+#feature .container .boxes .box:hover .overlay h2 {
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+}
+
+#feature .container .boxes .box:hover .overlay p {
+    transform: translateY(-10px);
+    transition: all 0.8s ease-in-out;
+}
+
+#feature .container .boxes .box:hover .overlay .icon {
+    transform: translateY(-10px);
+    transition: all 1s ease-in-out;
+}
+
+#feature .container .boxes .box .overlay h2,
+#feature .container .boxes .box .overlay p {
+    margin-bottom: 15px;
+}
+
+#feature .container .boxes .box .overlay .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ff4757;
+}
+#feature .container .boxes .box .overlay .icon{
+  color:#fff;
+}
+/* End Feature */
+
+/* Start Offer */
+#offer {
+    text-align: center;
+}
+
+#offer .container .boxes {
+    overflow: auto;
+}
+
+#offer .container .boxes .box {
+    float: left;
+    width: 30%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 50px;
+}
+
+#offer .boxes .box::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+     background-color: rgba(255,71,87,.8);
+    transition: all 0.5s ease-in-out;
+}
+
+#offer .boxes .box:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+#offer .container .boxes .box .offer-icon {
+    float: left;
+    width: 30%;
+    margin-top: 10px;
+    position: relative;
+    color:#ff4757;
+}
+
+#offer .container .boxes .box:hover .offer-icon {
+    color: #fff;
+    z-index: 1000;
+}
+
+#offer .container .boxes .box .icon-size {
+    width: 20%;
+}
+
+#offer .container .boxes .box .offer-info {
+    float: left;
+    width: 70%;
+}
+
+#offer .container .boxes .box .offer-info h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+}
+
+#offer .container .boxes .box .offer-info:hover h2 {
+    color: #fff;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#offer .container .boxes .box .info-size {
+    width: 80%;
+}
+
+/* End Offer */
+
+/* Start Choose Us */
+#choose {
+    text-align: center;
+}
+
+#choose .container .boxes {
+    overflow: auto;
+}
+
+#choose .container .boxes .box {
+    float: left;
+    width: 45%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+    border: 2px solid #ff4757;
+}
+
+#choose .container .boxes .box .box-content p {
+    margin-top: 40px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+#choose .container .boxes .box .offer-content {
+    text-align: left;
+    line-height: 2;
+}
+
+#choose .container .boxes .box .offer-content i{
+  color:#ff4757;
+}
+
+#choose .container .boxes .box .offer-content span {
+    margin-left: 10px;
+}
+
+#choose .container .boxes .box .box-circle span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #888;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#choose .container .boxes .box .box-circle .box-circle-active {
+    background-color: #ff4757;
+    cursor: pointer;
+}
+
+#choose .container .boxes .box .box-circle .box-circle-item-1:hover {
+    background-color: #ff4757;
+    cursor: pointer;
+}
+#choose .container .boxes .box .box-circle .box-circle-item-2:hover {
+    background-color: #ff4757;
+    cursor: pointer;
+}
+
+
+/* End Choose Us */
+
+/* Start client */
+#client {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-image: url("/images/client/img4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 287vh;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+}
+
+#client .client-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#client .client-top .container .boxes {
+    overflow: auto;
+    z-index: 1000;
+    position: relative;
+    
+}
+
+#client .client-top .container .boxes .box {
+    color: #fff;
+    float: left;
+    width: 20%;
+    padding: 20px;
+    border: 2px solid #ff4757;
+    margin-top: 20vh;
+    margin-bottom: 100px;
+}
+
+#client .client-top .container .boxes .box.client-content i {
+    margin: 15px 0;
+    display: inline-block;
+}
+
+/* End client */
+
+/* Start Pricing */
+#pricing {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+    padding:150px 0;
+    margin-top: 5vh;
+}
+
+#pricing .web-heading {
+  margin-bottom: 80px;
+}
+
+#pricing .container .boxes {
+    overflow: auto;
+}
+
+#pricing .container .boxes .box {
+    float: left;
+    width: 30%;
+    height: 550px;
+    background-color: #ff4757;
+    padding: 20px;
+    border: 2px solid #fff;
+    position: relative;
+    color:#fff;
+}
+
+#pricing .container .boxes .box .box-title {
+    position: relative;
+    margin-top: 20px;
+}
+
+#pricing .container .boxes .box .box-title h2 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#pricing .container .boxes .box-circle-price {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 40px auto;
+}
+
+.doller {
+    padding-top: 25px;
+}
+
+.box-list {
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+
+.btn a {
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #f5f5f5;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn a:hover {
+    background-color: #f2f2f2;
+    color: #000;
+    border: 2px solid #f2f2f2;
+}
+
+/* End Pricing */
+
+/* Start client bottom */
+#client-bottom{
+  position: relative;
+  z-index: 1000;
+  color: #fff;
+}
+#client-bottom .container .boxes .box{
+  width: 45%;
+  overflow: auto;
+  margin-top: 20vh;
+  padding: 10px;
+  text-align: center;
+  margin-bottom:5vh;
+}
+
+#client-bottom .container .boxes .box .client-img img{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#client-bottom .container .boxes .box .client-img{
+  width: 45%;
+  float: left;
+  margin-top: 10px;
+}
+#client-bottom .container .boxes .box .client-header{
+  width: 45%;
+  float: left;
+  margin-top: 20px;
+}
+#client-bottom .container .boxes .box .client-header h2{
+  margin-bottom:10px;
+  
+}
+#client-bottom .container .boxes .box .client-header p{
+    text-transform: capitalize;
+}
+#client-bottom .container .boxes .box .client-content-b{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+#client-bottom .container .boxes .box .client-content-b p{
+  text-align: center;
+}
+
+/* End client bottom */
+
+/* Start Team */
+#team{
+  text-align:center;
+  margin-top:80px;
+}
+#team .container .boxes .box{
+  margin-top:80px;
+  position: relative;
+}
+
+
+
+#team .container .boxes .box .team-img-box{
+  position: relative;
+}
+
+#team .container .boxes .box .team-icon{
+  position:absolute;
+  content:"";
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(255,71,87,.5);
+  
+}
+
+#team .team-icon i{
+  display:block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  margin-left: auto;
+  visibility: hidden;
+  margin-bottom: 8px;
+  color:#ff4757
+}
+#team .container .boxes .box:hover .team-icon i{
+    visibility: visible;
+   
+}
+
+
+#team .container .boxes .box .team-content h2,
+#team .container .boxes .box .team-content p
+{
+ text-transform: capitalize;
+ margin:10px 0;
+}
+
+
+/* End Team */
+
+/* Start Recent News */
+#recent{
+  text-align: center;
+  margin:80px auto;
+}
+#recent .container .boxes .box{
+  margin-top:80px;
+  position: relative;
+}
+#recent .container .boxes .box .recent-img{
+    margin-bottom: 10px;
+}
+#recent .container .boxes .box .recent-icon span{
+    padding:0 15px;
+    text-transform: capitalize;
+}
+
+#recent .container .boxes .box .recent-icon span i{
+    padding:0 12px;
+    color:#ff4757
+}
+#recent .recent-content h2{
+    margin:10px 0;
+}
+#recent .recent-content p{
+    margin-bottom:10px;
+}
+#recent .recent-btn{
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2000;
+    
+}
+#recent .recent-btn a{
+    color:#ff4757;
+}
+#recent .recent-btn:hover a{
+    color:#fff;
+    
+}
+
+/* End Recent News */
+
+/* Start Footer */
+#footer-end{
+  text-align: center;
+  margin:0 auto;
+  background-color:rgba(0,0,0,.5);
+  padding:40px;
+}
+#footer-end .footer-img{
+   margin-top: 40px;
+   margin-bottom: 40px;
+
+}
+#footer-end .footer-img img{
+  width:150px;
+  height:80px;
+}
+#footer-end .footer-icon{
+  margin-bottom: 40px;
+  display:inline-block;
+  width:50%;
+}
+#footer-end .footer-icon i{
+  color:#fff;
+  padding:10px 20px;
+  background-color: #ff4757;
+}
+#footer-end .footer-copy p{
+  letter-spacing: 3px;
+  font-size: 26px;
+  color:#fff;
+  text-transform: capitalize;
+}
+/* End Footer */
+
+
+
+
+
+
+
+
