@@ -167,7 +167,7 @@ img {
 
 /* Start Hero Image */
 .hero-image {
-    background-image: url("/images/hero/5.png");
+    background-image: url("./images/hero/5.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: fixed;
